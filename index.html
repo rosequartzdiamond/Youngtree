@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoungTree Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Replace 'logo.png' with the path to your logo file -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Replace 'logo.png' with your logo image path -->
+            <img src="images/logo.png" alt="Youngtree Logo" class="h-12">
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-gray-700 hover:text-pink-500">Home</a></li>
+                <li><a href="#tops" class="text-gray-700 hover:text-pink-500">Tops</a></li>
+                <li><a href="#bottoms" class="text-gray-700 hover:text-pink-500">Bottoms</a></li>
+                <li><a href="#dress" class="text-gray-700 hover:text-pink-500">Dress</a></li>
+                <li><a href="#accessories" class="text-gray-700 hover:text-pink-500">Accessories</a></li>
+                <li><a href="#cart" class="text-gray-700 hover:text-pink-500">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#about" class="text-gray-700 hover:text-pink-500">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+   <!-- Main Content -->
+    <div class="container mx-auto px-4 pt-20">
+        <!-- Home Section with Slider -->
+        <section id="home" class="py-10">
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Welcome to Youngtree Fashion</h1>
+            
+            <!-- Slider Container -->
+            <div class="slider-container relative max-w-[960px] mx-auto h-96 rounded-lg mb-6 overflow-hidden shadow-lg">
+                <!-- Slides -->
+                <div class="slides flex h-full">
+                    <!-- Slide 1 -->
+                    <div class="slide min-w-full h-full">
+                        <img src="images/banner1.jpg" alt="Youngtree Banner 1" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide min-w-full h-full">
+                        <img src="images/banner2.png" alt="Youngtree Banner 2" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide min-w-full h-full">
+                        <img src="images/banner3.png" alt="Youngtree Banner 3" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Tambahkan slide lain di sini jika perlu -->
+                </div>
+
+                <!-- Slider Navigation Buttons -->
+                <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none z-20">
+                    ❮ <!-- Left Arrow -->
+                </button>
+                <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none z-20">
+                    ❯ <!-- Right Arrow -->
+                </button>
+
+                <!-- Slider Dots (Optional) -->
+                <div class="dots-container absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+                    <!-- Dots akan ditambahkan oleh JavaScript -->
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-600">Discover the latest trends in women's fashion with Youngtree.</p>
+        </section>
+
+        <!-- Tops Section -->
+        <section id="tops" class="py-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Tops</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Replace 'top1.jpg', 'top2.jpg', etc., with your image paths -->
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops1.jpeg" alt="Top 1" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Ruffle Summer Top</h3>
+                    <p class="text-gray-600">$21.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="1" data-name="Ruffle Summber Top" data-price="21.99" data-image="images/tops1.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops2.jpeg" alt="Top 2" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Ash Flow Top</h3>
+                    <p class="text-gray-600">$19.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="2" data-name="Ash Flow Top" data-price="19.99" data-image="images/tops2.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops3.jpeg" alt="Top 3" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">White T-Shirt</h3>
+                    <p class="text-gray-600">$20.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="3" data-name="White T-Shirt" data-price="20.99" data-image="images/tops3.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops4.jpeg" alt="Top 4" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Oversize Sweater</h3>
+                    <p class="text-gray-600">$31.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="4" data-name="Oversize Linen" data-price="31.99" data-image="images/tops4.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops5.jpeg" alt="Top 5" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Black Zipper Top</h3>
+                    <p class="text-gray-600">$27.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="5" data-name="Black Zipper Top" data-price="327.99" data-image="images/tops5.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops6.jpeg" alt="Top 6" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Hoodie</h3>
+                    <p class="text-gray-600">$30.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="6" data-name="Hoodie" data-price="30.99" data-image="images/tops6.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops7.jpeg" alt="Top 7" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Black Leather Jacket</h3>
+                    <p class="text-gray-600">$32.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="7" data-name="Black Leather Jacket" data-price="32.99" data-image="images/tops7.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/tops8.jpeg" alt="Top 7" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Wrinkle Lace Top</h3>
+                    <p class="text-gray-600">$26.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="8" data-name="Wrinkle Lace Top" data-price="26.99" data-image="images/tops8.jpeg">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottoms Section -->
+        <section id="bottoms" class="py-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Bottoms</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Replace 'bottom1.jpg', etc., with your image paths -->
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms1.jpeg" alt="Bottom 1" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2"></h3>Oversize Jeans
+                    <p class="text-gray-600">$28.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="9" data-name="Oversize Jeans" data-price="28.99" data-image="images/bottoms1.jepg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms2.jpeg " alt="Bottom 2" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Oversize Pants</h3>
+                    <p class="text-gray-600">$27.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="10" data-name="Oversize Pants" data-price="27.99" data-image="images/bottoms2.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms3.jpeg" alt="Bottom 3" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Flare Jeans</h3>
+                    <p class="text-gray-600">$26.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="11" data-name="Flare Jeans" data-price="26.99" data-image="images/bottoms3.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms4.jpeg" alt="Bottom 4" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Balloon pants</h3>
+                    <p class="text-gray-600">$26.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="12" data-name="Balloon Pants" data-price="26.99" data-image="images/bottoms4.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms5.jpeg" alt="Bottom 5" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Long Black Skirt</h3>
+                    <p class="text-gray-600">22.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="13" data-name="Long Black Skirt" data-price="22.99" data-image="images/bottoms5.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms6.jpeg" alt="Bottom 6" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Korean Mini Skirt</h3>
+                    <p class="text-gray-600">21.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="14" data-name="Korean Mini Skirt" data-price="21.99" data-image="images/bottoms6.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms7.jpeg" alt="Bottom 7" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Midi Skirt</h3>
+                    <p class="text-gray-600">$22.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="15" data-name="Midi Skirt" data-price="22.99" data-image="images/bottoms7.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/bottoms8.jpeg" alt="Bottom 8" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">White Ballon Skirt</h3>
+                    <p class="text-gray-600">$21.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="16" data-name="White Balloon Skirt" data-price="21.99" data-image="images/bottoms8.jpeg">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dress Section -->
+        <section id="dress" class="py-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Dress</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Replace 'dress1.jpg', etc., with your image paths -->
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress1.jpeg" alt="Dress 1" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">White satin Dress</h3>
+                    <p class="text-gray-600">$65.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="17" data-name="White Satin Dress" data-price="65.99" data-image="images/dress1.jpeg">Add to Cart</button>
+                </div>
+            <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress2.jpeg" alt="Dress 2" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Balloon Mini Dress</h3>
+                    <p class="text-gray-600">$45.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="18" data-name="Balloon Mini Dress" data-price="45.99" data-image="images/dress2.jpeg">Add to Cart</button>
+                </div>
+            <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress3.jpeg" alt="Dress 3" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Elegant Black Dress</h3>
+                    <p class="text-gray-600">$58.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="19" data-name="Elegant Black Dress" data-price="58.99" data-image="images/dress3.jpeg">Add to Cart</button>
+                </div>
+            <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress4.jpeg" alt="Dress 4" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Ruffle Black Dress</h3>
+                    <p class="text-gray-600">$44.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="20" data-name="Ruffle Black Dress" data-price="44.99" data-image="images/dress4.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress5.jpeg" alt="Dress 5" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Vintage Dress</h3>
+                    <p class="text-gray-600">$65.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="21" data-name="Vintage Dress" data-price="65.99" data-image="images/dress5.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress6.jpeg" alt="Dress 6" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Barbie Dress</h3>
+                    <p class="text-gray-600">$59.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="22" data-name="Barbie Dress" data-price="59.99" data-image="images/dress6.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress7.jpeg" alt="Dress 7" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Ruffle White Dress</h3>
+                    <p class="text-gray-600">$44.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="23" data-name="Ruffle White Dress" data-price="44.99" data-image="images/dress7.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/dress8.jpeg" alt="Dress 8" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Fairy Dress</h3>
+                    <p class="text-gray-600">$57.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="24" data-name="Fairy Dress" data-price="57.99" data-image="images/dress8.jpeg">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories Section -->
+        <section id="accessories" class="py-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Accessories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Replace 'accessory1.jpg', etc., with your image paths -->
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories1.jpeg" alt="Accessory 1" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Gold Rings Set</h3>
+                    <p class="text-gray-600">$15.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="25" data-name="Gold Rings Set" data-price="15.99" data-image="images/accessories1.jpeg">Add to Cart</button>
+                </div>
+            <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories2.jpeg" alt="Accessory 2" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Heart Bracelets Set</h3>
+                    <p class="text-gray-600">$18.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="26" data-name="Heart Bracelets Set" data-price="18.99" data-image="images/accessories2.jpeg">Add to Cart</button>
+                </div>
+            <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories3.jpeg" alt="Accessory 3" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">SeaShell Bracelets Set</h3>
+                    <p class="text-gray-600">$18.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="27" data-name="SeaShell Bracelets Set" data-price="18.99" data-image="images/accessories3.jpeg">Add to Cart</button>
+                </div>
+            <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories4.jpeg" alt="Accessory 4" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Flower Earrings</h3>
+                    <p class="text-gray-600">$14.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="28" data-name="Flower Earrings" data-price="14.99" data-image="images/accessories4.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories5.jpeg" alt="Accessory 5" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">white Pearl Necklace</h3>
+                    <p class="text-gray-600">$17.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="29" data-name="White Pearl Necklace" data-price="17.99" data-image="images/accessories5.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories6.jpeg" alt="Accessory 6" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Necklace Set</h3>
+                    <p class="text-gray-600">$25.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="30" data-name="Necklace Set" data-price="25.99" data-image="images/accessories6.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories7.jpeg" alt="Accessory 7" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Silver Watch</h3>
+                    <p class="text-gray-600">$38.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="31" data-name="Silver Watch" data-price="38.99" data-image="images/accessories7.jpeg">Add to Cart</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow mx-auto max-w-md">
+                    <img src="images/accessories8.jpeg" alt="Accessory 8" class="w-full h-64 object-cover rounded">
+                    <h3 class="text-lg font-semibold mt-2">Diamond Rings</h3>
+                    <p class="text-gray-600">$50.99</p>
+                    <button class="add-to-cart mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" data-id="32" data-name="Diamond Rings" data-price="50.99" data-image="images/accessories8.jpeg">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="py-10">
+            <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Shopping Cart</h2>
+            <div id="cart-items" class="space-y-4">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <p id="cart-total" class="text-xl font-semibold mt-4">Total: $0.00</p>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-10">
+            <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
+            <p class="text-gray-600 text-justify">
+                At Youngtree, we believe fashion is more than just clothing—it's a powerful form of self-expression. 
+                We are passionate about creating timeless, trend-forward pieces that empower women to feel confident, 
+                beautiful, and bold every day. From effortlessly chic streetwear to elegant evening outfits, our collections 
+                are thoughtfully curated to celebrate every woman’s unique style. Designed with comfort, quality, and 
+                individuality in mind, our fashion reflects the diverse spirit of modern women around the world. 
+                Youngtree Fashion is dedicated to bringing stylish and affordable women's clothing to you. 
+                Our mission is to empower women through fashion with our curated collections of tops, bottoms, and accessories.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>Youngtree Fashion Store</p>
+            <p>Address: Jl. Contoh No. 123, Jakarta, Indonesia</p>
+            <p>Phone: +62 123 456 7890</p>
+            <p>Email: contact@youngtreefashion.com</p>
+            <p>
+                Follow us:
+                <a href="https://instagram.com/youngtreefashion" class="text-pink-300 hover:text-pink-500">Instagram</a> |
+                <a href="https://pinterest.com/youngtreefashion" class="text-pink-300 hover:text-pink-500">Pinterest</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
